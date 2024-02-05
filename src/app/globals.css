@@ -1,8 +1,8 @@
 @tailwind base;
+/* purgecss start ignore */
 @tailwind components;
-@tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,10 +24,53 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+/* width */
+
+@font-face {
+  font-family: starkiller;
+  src: url("/fonts/Starkiller_Italic.ttf");
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@font-face {
+  font-family: norwester;
+  src: url("/fonts/norwester.otf");
 }
+@font-face {
+  font-family: imperfect;
+  src: url("/fonts/ImPerfect23.otf");
+}
+@font-face {
+  font-family: quantum;
+  src: url("/fonts/Quantum.otf");
+}
+body {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: linear-gradient(#5372d7, #000000);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1b4ae6;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(red, yellow);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@tailwind utilities;
+/* purgecss end ignore */
+
